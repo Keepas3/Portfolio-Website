@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Portfolio website</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">BryanDev</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Education</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Experience</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Welcome,<br>I'm <span class="home__title-color">Bryan Fung</span></h1>
+
+                    <a href="#" class="button">Resume</a>
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/bryan-fung-a2a089256/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/Keepas3" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                    <a href="mailto:bryanfung61@gmail.com" class="home__social-icon"><i class='bx bx-envelope'></i></a>
+                </div>
+
+                <div class="home__img">
+                    <img class="home__blob-img" src="assets/img/bryan.png" alt="Your Photo">
+                  </div>
+                  
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/About_Me.jpg" alt="About Me">
+                    </div>
+                    
+                    <div>
+                    <h2 class="about__subtitle">Aspiring Software Developer & Engineer</h2>
+                    <p class="about__text">
+                    I am eager to hone my skills and contribute to innovative projects that make a difference. I was born and raised in New York City, where I developed my passion for 
+                    technology. Currently, as a third-year Computer Science student at St. John's University, I am seeking opportunities to learn more beyond my studies.
+                    <br><br>
+                    Outside of work and academics, I enjoy traveling, reading, playing chess, and staying active through sports. Above all, I am committed to making a impact on the community and leaving a mark through my work.
+                    <br> <br>
+                    Currently working on Snap Notes and Dragon Discord Bot, projects that utilize NLP and APIs respectively.
+                    </p>
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--===== PROJECTS =====-->
+            <section class="project section " id="project">
+                <h2 class="section-title">Projects</h2>
+            
+                <div class="project__container bd-grid">
+                    <div class="project__container bd-grid">
+                        <!-- Project 1 -->
+                        <a href="https://github.com/Keepas3/VideoRecap-HeadStarterHackathon" class="project__box">
+                            <h2 class="project__subtitle">Video Recap</h2>
+                            <p class="project__text">
+                                Video Recap is an application designed to condense YouTube videos into a few short, concise lines. 
+                                Leverages the use of open router AI and YouTube transcripts.
+                                Built by a team of 4 developers during SJU ACM x HeadStarter Hackathon.
+                            </p>
+                            <p class = "technical_stack">
+                                Python | OpenRouterAI | HTML/CSS
+                            </p>
+                        </a>
+                    
+                        <!-- Project 2 -->
+                        <a href="https://github.com/Alegacki21/VCRTS-SWE-Project" class="project__box">
+                            <h2 class="project__subtitle">VCRTS</h2>
+                            <p class="project__text">
+                                A distributed cloud computing system that leverages parked vehicles' computational resources to create a static cloud 
+                                environment. Features real-time job and vehicle scheduling, resource allocation, and a GUI for both client and admins.
+                                Built by a team of 5 developers.
+                            </p>
+                            <p class = "technical_stack">
+                                Java | Java Swing | MYSQL
+                            </p>
+                        </a>
+                    
+                        <!-- Project 3 -->
+                        <a href="https://github.com/Keepas3/SnapNotes" class="project__box">
+                            <h2 class="project__subtitle">SnapNotes</h2>
+                            <p class="project__text">
+                                A website designed to make extracting information out of word documents easier with the use of LLM. 
+                                Provides users with a simple site to submit their file and SnapNotes summarizes the information into easy to read flashcards.
+                            </p>
+                            <p class = "technical_stack">
+                                Python | HTML/CSS | React
+                            </p>
+                        </a>
+                    
+                        <!-- Project 4 -->
+                        <a href="https://github.com/Keepas3/Baby-Dragon-Bot" class="project__box">
+                            <h2 class="project__subtitle">Baby Dragon Bot</h2>
+                            <p class="project__text">
+                                A Discord bot that leverages data from the popular mobile game Clash of Clans to provide player and clan statistics. 
+                                Features up-to-date updates and utilizes the CoC API to its fullest extent.
+                            </p>
+                            <p class = "technical_stack">
+                                Python | Discord API | Railway
+                            </p>
+                        </a>
+                    
+                        <!-- Project 5 -->
+                        <a href="https://github.com/Keepas3/Discord-Bot" class="project__box">
+                            <h2 class="project__subtitle">Dragon Bot</h2>
+                            <p class="project__text">
+                                An upgraded version of the Baby Dragon Bot that not only provides information on the game Clash of Clans 
+                                but also helps moderate Discord Servers. 
+                                Features commands to manage user warnings, receive posts, and retrieve player information. 
+                            </p>
+                            <p class = "technical_stack">
+                                Python | Discord API | Railway
+                            </p>
+                        </a>
+                    
+                        <!-- Project 6 -->
+                        <a href="https://github.com/Keepas3/YouTube-Saver" class="project__box">
+                            <h2 class="project__subtitle">YouTube Saver</h2>
+                            <p class="project__text">
+                                YouTube Saver is designed to download YouTube videos as well as being able to convert MP4 files to Flac. 
+                                Features an interface for file/URL submissions and saves files to a new output folder on the user's desktop.
+                            </p>
+                            <p class = "technical_stack">
+                                Python | HTML/CSS | Javascript
+                            </p>
+                        </a>
+                    
+                        <div class="viewMore__container">
+                            <a href="https://github.com/Keepas3?tab=repositories" class="viewMore__box">
+                                <h2 class="project__subtitle">View More:</h2>
+                                <p class="project__text">Click here to see more of my projects on my personal GitHub!</p>
+                            </a>
+                        </div>
+                        
+
+                    </div>  
+
+                    </div>                                   
+                </div>
+            </section>
+
+
+
+            <!--===== SKILLS =====-->
+            <section class="education section" id="skills">
+                <h2 class="section-title">Education</h2>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle">St. John's University</h2>
+                        <p class="skills__text">Undergraduate B.S. in Computer Science 
+                        </p> 
+                        <ul class="work__text-below">
+                            <li>Overall GPA: 3.80 </li>
+                            <li>Dean's List for five consecutive semesters</li>
+                            <li>Capstone Project: Creating a distributed cloud computing system (VCRTS) </li>
+                        </ul>
+                        
+                    </div>
+                    <p class="graduation__text">2022 - Expected MAY 2026</p>
+                </div>
+                <br>
+                <br>
+            
+                <h2 class="section-title">Relevant Coursework</h2>
+                <div class="course__container">
+                    <div class="course__box">
+                        <img src="assets/img/SE_icon.png" alt="Software Engineering Icon" class="course__icon">
+                        <p class="course__text">Software Engineering<br>CUS 1156</p>
+                    </div>
+            
+                    <!-- Course 2 -->
+                    <div class="course__box">
+                        <img src="assets/img/Cryptography.png" alt="Cryptography Icon" class="course__icon">
+                        <p class="course__text">Data Security/Cryptography<br>CUS 1185</p>
+                    </div>
+            
+                    <!-- Course 3 -->
+                    <div class="course__box">
+                        <img src="assets/img/networking_icon.png" alt="Networking Icon" class="course__icon">
+                        <p class="course__text">Networking<br>NET 1011</p>
+                    </div>
+            
+                    <!-- Add more courses in the same structure -->
+                     <!-- Course 4 -->
+                    <div class="course__box">
+                        <img src="assets/img/data_structures.png" alt="Data Structures Icon" class="course__icon">
+                        <p class="course__text">Data Structures<br>CUS 1126</p>
+                    </div>
+                    <!-- Course 5 -->
+                    <div class="course__box">
+                        <img src="assets/img/dbms_icon.png" alt="Database Icon" class="course__icon">
+                        <p class="course__text">Database Management Systems<br>CUS 1165</p>
+                    </div>
+                    <!-- Course 6 -->
+                    <div class="course__box">
+                        <img src="assets/img/algorithms_icon.png" alt="Algorithms Icon" class="course__icon">
+                        <p class="course__text">Analysis of Algorithms<br>CUS 1168</p>
+                    </div>
+                     <!-- Course 4 -->
+                     <div class="course__box">
+                        <img src="assets/img/operating_systems_icon.png" alt="Operating Systems Icon" class="course__icon">
+                        <p class="course__text">Operating Systems<br>CUS 1162</p>
+                    </div>
+                    <!-- Course 5 -->
+                    <div class="course__box">
+                        <img src="assets/img/architecture_icon.png" alt="Computer Architecture Icon" class="course__icon">
+                        <p class="course__text">Computer Architecture<br>CUS 1163</p>
+                    </div>
+                    <!-- Course 6 -->
+                    <div class="course__box">
+                        <img src="assets/img/AI_icon.png" alt="AI Icon" class="course__icon">
+                        <p class="course__text">Intro to Artificial Intelligence<br>CUS 1174</p>
+                    </div>
+                </section>
+
+            </section>
+
+
+
+
+            <!--===== WORK =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Experience</h2>
+              
+                <div class="work__container">
+                  <!-- First item -->
+                  <div class="work__item">
+                    <div class="work__img">
+                      <img src="assets/img/Boys_club_icon.png" alt="The Boys' Club of New York">
+                    </div>
+                    <p class="work__text-above">
+                      Teacher Assistant<br>
+                      Boys Club of New York<br>
+                      Queens, NY
+                    </p>
+                    <ul class="work__text-below">
+                      <li>Engaged in workshops and mentoring with students of the youth development program.</li>
+                      <li>Organized and supervised recreation activities, for the inclusion of all students and staff.</li>
+                    </ul>
+                  </div>
+              
+                  <!-- Second Item -->
+                  <div class="work__item">
+                    <div class="work__img">
+                      <img src="assets/img/CCA_USA.png" alt="CCA USA">
+                    </div>
+                    <p class="work__text-above">
+                      Student Employee<br>
+                      CCA USA<br>
+                      Queens, NY
+                    </p>
+                    <ul class="work__text-below">
+                      <li>Coordinated and distributed promotional materials for a charity organization created to help animals.</li>
+                      <li>Collaborated as a team with fellow employees to replenish & sell food baked by students.</li>
+                      <li>Raised over $2,327.</li>
+                    </ul>
+                  </div>
+              
+                  <!-- Third item -->
+                  <div class="work__item">
+                    <div class="work__img">
+                      <img src="assets/img/Mercy_icon.PNG" alt="Mercy Food Pantry">
+                    </div>
+                    <p class="work__text-above">
+                      Distributor <br>
+                      Our Lord of Mercy Food Pantry<br>
+                      Brooklyn, NY
+                    </p>
+                    <ul class="work__text-below">
+                      <li>Participated in a philanthropic program that provides weekly supplies to those in need.</li>
+                      <li>Involved in packing and delivering goods.</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              
+            
+            
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <form action="" class="contact__form">
+                        <input type="text" placeholder="Name" class="contact__input">
+                        <input type="mail" placeholder="Email" class="contact__input">
+                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                        <input type="button" value="Enter" class="contact__button button">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">BryanDev</p>
+            <div class="footer__social">
+                <a href="https://www.linkedin.com/in/bryan-fung-a2a089256" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/Keepas3" class="footer__icon"><i class='bx bxl-github' ></i></a>
+                <a href="mailto:bryanfung61@gmail.com" class="footer__icon"><i class='bx bx-envelope'></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxs-file-png'></i></a>
+                
+            </div>
+            <p class="footer__copy">&#169; BryanDev. All rigths reserved</p>
+        </footer>
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
