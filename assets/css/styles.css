@@ -310,15 +310,12 @@ img {
 /* ===== Projects =====*/
 .project__container {
   row-gap: rem;
+  /* display: flex;
+  flex-wrap: wrap; */
 }
 
 
-/* ===== WORK =====*/
-/* .work {
-  position: relative;
-  row-gap: 5rem;
-  padding: 4rem 0 5rem;
-} */
+
 .work__container {
   max-width: 900px; /* Set a maximum width for the container */
   width:100%;
@@ -514,8 +511,10 @@ img {
 }
 
 .project__container {
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    column-gap: 2rem; /* Space between columns */
+  display: grid; /* Use grid for a responsive layout */
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Adjust box width */
+  gap: 1.5rem; /* Adds space between boxes */
+  padding-top: 2rem;
 }
 
 .skills__container {
@@ -541,7 +540,7 @@ img {
 
 /* Course Box */
 .course__container {
-  display: grid; /* Enables grid layout */
+  display: flex; /* Enables grid layout */
   grid-template-columns: repeat(3, 1fr); /* Creates exactly 3 columns */
   grid-auto-rows: 150px; /* Sets a fixed height for each row */
   gap: 1.75rem; /* Adds spacing between boxes */
@@ -585,6 +584,8 @@ img {
   }
   .contact__container {
     justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 768px) {
@@ -641,6 +642,14 @@ img {
   .project__container {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     column-gap: 2rem;
+  }
+  .course__container {
+    display: grid; /* Enables grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Creates exactly 3 columns */
+    grid-auto-rows: 150px; /* Sets a fixed height for each row */
+    gap: 1.75rem; /* Adds spacing between boxes */
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
   /* .work__container {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
