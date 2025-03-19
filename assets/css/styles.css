@@ -5,7 +5,6 @@
 :root {
   --header-height: 3rem;
   --font-semi: 600;
-  /*===== Colores =====*/
   /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
   /* HSL color mode */
   --hue-color: 224;
@@ -26,7 +25,7 @@
   --z-back: -10;
   --z-fixed: 100;
 }
-@media screen and (min-width: 968px) {
+@media screen and (min-width: 968px) {  /* For desktops and tablets */
   :root {
     --big-font-size: 3.5rem;
     --h2-font-size: 2rem;
@@ -123,7 +122,7 @@ img {
   align-items: center;
   font-weight: var(--font-semi);
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) { /*For modern smartphones */
   .nav__menu {
     position: fixed;
     top: var(--header-height);
@@ -242,7 +241,7 @@ img {
 }
 .about__subtitle {
   margin-bottom: var(--mb-2);
-  padding-left: 0.25rem; /* Indent*/
+  /* padding-right: 0.25rem;  */
 }
 .about__img {
   justify-self: center;
@@ -308,10 +307,70 @@ img {
   border-radius: 0.5rem;
 }
 /* ===== Projects =====*/
+
 .project__container {
-  row-gap: rem;
-  /* display: flex;
-  flex-wrap: wrap; */
+  max-width: 900px; /* Set a maximum width for the container */
+  width:100%;
+  justify-self: center;
+  padding: 0.25rem; /* Add some padding inside the container */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns with smaller items */
+  column-gap: 3.0rem; /* Reduce gap between columns */
+  row-gap: 1.5rem; /* Reduce gap between rows */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); 
+}
+.project__box {
+  border: 1px solid #ddd; /* Add a light border around the box */
+  border-radius: 10px; /* Smooth, rounded corners */
+  padding: 1.8rem; /* Add inner space */
+  background-color: #f9f9f9; /* Light background color */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  margin-bottom: 2.5rem; /* Add space between boxes */
+  transition: transform 0.3s ease; /* Animation on hover */
+}
+.project__box:hover {
+transform: translateY(-5px); /* Lifts box slightly on hover */
+}
+
+.course__container {
+  max-width: 250px; /* Set a maximum width for the container */
+  width:100%;
+  justify-self: center;
+  padding: 0.25rem; /* Add some padding inside the container */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns with smaller items */
+  column-gap: 3.0rem; /* Reduce gap between columns */
+  row-gap: 2.5rem; /* Reduce gap between rows */
+  
+}
+
+.course__box {
+  background-color: #f9f9f9; /* Light background for the box */
+  flex-wrap: wrap;
+  border: 1px solid #ddd; /* Optional border for subtle separation */
+  border-radius: 8px; /* Smooth corners */
+  padding: 1rem; /* Adds space inside the box */
+  text-align: center; /* Centers content inside */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
+  transition: transform 0.3s ease; 
+}
+
+.course__box:hover {
+  transform: translateY(-5px); /* Lifts box slightly on hover */
+}
+.course__icon {
+  width: 70px; /* Adjusts icon size */
+  height: 70px;
+  margin-bottom: 1.5rem; /* Space between icon and text */
+  justify-self: center;
+  background-color: #f9f9f9; 
+}
+
+.course__text {
+  font-size: 15px;
+  color: #333; /* Dark text for readability */
+  line-height: 1.2; /* Adjust line spacing */
+  padding-bottom: 5rem;
 }
 
 
@@ -429,7 +488,7 @@ img {
 }
 
 /* ===== MEDIA QUERIES=====*/
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 320px) { /* Older phones */
   .home {
     row-gap: 2rem;
   }
@@ -437,7 +496,7 @@ img {
     width: 200px;
   }
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) { /*Computer or Desktop */
   .home {
     padding: 4rem 0 2rem;
   }
@@ -460,18 +519,6 @@ img {
     align-items: center;
     text-align: initial;
   }
-  .project__box {
-    border: 1px solid #ddd; /* Add a light border around the box */
-    border-radius: 10px; /* Smooth, rounded corners */
-    padding: 1.8rem; /* Add inner space */
-    background-color: #f9f9f9; /* Light background color */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    margin-bottom: 2.5rem; /* Add space between boxes */
-    transition: transform 0.3s ease; /* Animation on hover */
-}
-.project__box:hover {
-  transform: translateY(-5px); /* Lifts box slightly on hover */
-}
 
 .viewMore__box {
   display: inline-block; /* Allows hover styling */
@@ -488,7 +535,6 @@ img {
 .viewMore__box:hover {
   transform: translateY(-5px); /* Applies hover effect */
 }
-
 
 
 
@@ -530,31 +576,26 @@ img {
   font-size: 16px; /* Optional: Adjust text size to match the design */
 }
 
-/* Course Container */
-.course__container {
-  display: grid; /* Use grid for a responsive layout */
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Adjust box width */
-  gap: 1.5rem; /* Adds space between boxes */
-  padding-top: 2rem;
-}
 
 /* Course Box */
 .course__container {
-  display: flex; /* Enables grid layout */
-  grid-template-columns: repeat(3, 1fr); /* Creates exactly 3 columns */
-  grid-auto-rows: 150px; /* Sets a fixed height for each row */
-  gap: 1.75rem; /* Adds spacing between boxes */
+  max-width: 1350px;
+  display: flex; 
+  grid-template-columns: repeat(3, 1fr); 
+  grid-auto-rows: 150px; 
+  gap: 1.75rem; 
   padding-left: 8rem;
   padding-right: 8rem;
 }
 
 .course__box {
+  width: 100%;
   background-color: #f9f9f9; /* Light background for the box */
   border: 1px solid #ddd; /* Optional border for subtle separation */
   border-radius: 8px; /* Smooth corners */
   padding: 1rem; /* Adds space inside the box */
-  text-align: center; /* Centers content inside */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
+  text-align: center; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   transition: transform 0.3s ease; /* Animation on hover */
 }
 
@@ -660,7 +701,7 @@ img {
     /* background-color:red; 
   }  */
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) { /* Desktop */
   .bd-grid {
     margin-left: auto;
     margin-right: auto;
