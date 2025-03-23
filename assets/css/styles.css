@@ -320,6 +320,7 @@ img {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); 
 }
 .project__box {
+  --s: 10px;
   border: 1px solid #ddd; /* Add a light border around the box */
   border-radius: 10px; /* Smooth, rounded corners */
   padding: 1.8rem; /* Add inner space */
@@ -329,7 +330,10 @@ img {
   transition: transform 0.3s ease; /* Animation on hover */
 }
 .project__box:hover {
-transform: translateY(-5px); /* Lifts box slightly on hover */
+  transform: translateY(-5px); /* Lifts box slightly on hover */
+  outline: calc(var(--s)/2) solid #0009;
+  outline-offset: calc(var(--s)/-2);
+
 }
 
 .course__container {
@@ -444,7 +448,7 @@ transform: translateY(-5px); /* Lifts box slightly on hover */
 }
 
 .contact__section {
-  background-color: white;
+  background-color: rgb(237, 237, 240);
   padding: 1.5rem;
   border-radius: 0.5rem; /* Rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
@@ -523,17 +527,23 @@ transform: translateY(-5px); /* Lifts box slightly on hover */
 .viewMore__box {
   display: inline-block; /* Allows hover styling */
   border: 1px solid #ddd;
-  border-radius: 8px;
+  --s: 8px;
+  border-radius: --s;
   padding: 1.5rem;
   background-color: #f9f9f9;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
   text-align: center; /* Centers content inside */
+  
+  /* cursor: pointer; */
   transition: transform 0.3s ease; /* Hover animation */
+
 }
 
 .viewMore__box:hover {
   transform: translateY(-5px); /* Applies hover effect */
+  outline: calc(var(--s)/2) solid #0009;
+  outline-offset: calc(var(--s)/-2);
 }
 
 
@@ -601,6 +611,7 @@ transform: translateY(-5px); /* Lifts box slightly on hover */
 
 .course__box:hover {
   transform: translateY(-5px); /* Lifts box slightly on hover */
+  
 }
 
 .course__icon {
