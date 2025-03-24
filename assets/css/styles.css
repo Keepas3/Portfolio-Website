@@ -335,20 +335,41 @@ img {
   outline-offset: calc(var(--s)/-2);
 
 }
+.viewMore__box {
+  display: inline-block; /* Allows hover styling */
+  border: 1px solid #ddd;
+  --s: 8px;
+  border-radius: --s;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  text-align: center; /* Centers content inside */
+  
+  /* cursor: pointer; */
+  transition: transform 0.3s ease; /* Hover animation */
+
+}
+
+.viewMore__box:hover {
+  transform: translateY(-5px); /* Applies hover effect */
+  outline: calc(var(--s)/2) solid #0009;
+  outline-offset: calc(var(--s)/-2);
+}
 
 .course__container {
-  max-width: 250px; /* Set a maximum width for the container */
+  max-width: 200px; /* Set a maximum width for the container */
   width:100%;
   justify-self: center;
   padding: 0.25rem; /* Add some padding inside the container */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns with smaller items */
   column-gap: 3.0rem; /* Reduce gap between columns */
   row-gap: 2.5rem; /* Reduce gap between rows */
   
 }
 
 .course__box {
+  max-height: 225px;
   background-color: #f9f9f9; /* Light background for the box */
   flex-wrap: wrap;
   border: 1px solid #ddd; /* Optional border for subtle separation */
