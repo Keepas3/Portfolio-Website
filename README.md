@@ -10,10 +10,11 @@ Thanks for visiting!
 * HTML/CSS
 * JavaScript
 * SCSS 
+* Vercel
 
 ## Let's Connect
 Email: bryanfung61@gmail.com
 
 LinkedIn: https://www.linkedin.com/in/bryan-fung-a2a089256/
 
-Website: https://personalwebsite-eight-psi.vercel.app/
+Website: https://bryan-portfoliodev.vercel.app/

@@ -211,7 +211,8 @@ img {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 260px;
+  top: -1;
+  width: 235px;
 }
 .home__blob {
   fill: var(--first-color);
@@ -519,6 +520,9 @@ img {
   }
   .home__img {
     width: 200px;
+    height: 80%;
+
+    
   }
 }
 @media screen and (min-width: 576px) { /*Computer or Desktop */
@@ -538,6 +542,7 @@ img {
   .home__img {
     width: 300px;
     bottom: 25%;
+    
   }
   .about__container {
     grid-template-columns: repeat(2, 1fr);
@@ -699,6 +704,8 @@ img {
   .home__img {
     width: 400px;
     bottom: 10%;
+    
+    
   }
   .about__container {
     padding-top: 2rem;
@@ -743,5 +750,7 @@ img {
   }
   .home__img {
     width: 450px;
+    height: 85%;
+
   }
 }
