@@ -336,6 +336,26 @@ img {
   outline-offset: calc(var(--s)/-2);
 
 }
+
+.first-place {
+  position: relative;
+  background-color: #ffffff; /* Gold medal color */
+  padding: 15px;
+}
+
+.first-place::before {
+  content: "🥇 Winner!";
+  position: absolute;
+  top: 20;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #d4af37;
+  color: white;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
 .viewMore__box {
   display: inline-block; /* Allows hover styling */
   border: 1px solid #ddd;
@@ -437,6 +457,18 @@ img {
   width: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
+}
+.work__img__sju {
+  width: 60%;
+  display: block;
+  margin: auto;
+  object-fit: cover;
+  transform: scale(1); /* Ensures transition works */
+  transition: transform 0.5s ease;
+}
+
+.work__img__sju:hover {
+  transform: scale(1.1);
 }
 
 .work__img img:hover {
