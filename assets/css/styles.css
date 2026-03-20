@@ -310,25 +310,26 @@ img {
 /* ===== Projects =====*/
 
 .project__container {
-  max-width: 900px; /* Set a maximum width for the container */
-  width:100%;
-  justify-self: center;
-  padding: 0.25rem; /* Add some padding inside the container */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns with smaller items */
-  column-gap: 3.0rem; /* Reduce gap between columns */
-  row-gap: 1.5rem; /* Reduce gap between rows */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); 
+  /* Use 300px as the minimum so cards don't get too skinny */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 2rem;
+  padding: 2rem 0.25rem;
+  max-width: 900px;
+  justify-self: center;
+  align-items: stretch; /* This ensures all cards in a row have the exact same height */
 }
 .project__box {
-  --s: 10px;
-  border: 1px solid #ddd; /* Add a light border around the box */
-  border-radius: 10px; /* Smooth, rounded corners */
-  padding: 1.8rem; /* Add inner space */
-  background-color: #f9f9f9; /* Light background color */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  margin-bottom: 2.5rem; /* Add space between boxes */
-  transition: transform 0.3s ease; /* Animation on hover */
+  position: relative; /* CRITICAL: This is the anchor for your badge */
+  display: flex;
+  flex-direction: column;
+  padding: 1.8rem;
+  padding-bottom: 5rem; /* Increase this to give the badge room at the bottom */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 .project__box:hover {
   transform: translateY(-5px); /* Lifts box slightly on hover */
@@ -339,7 +340,7 @@ img {
 
 .first-place {
   position: relative;
-  background-color: #ffffff; /* Gold medal color */
+  /* background-color: #ffffff; Gold medal color */
   padding: 15px;
 }
 
@@ -354,6 +355,27 @@ img {
   font-weight: bold;
   padding: 5px 15px;
   border-radius: 5px;
+}
+
+.third-place {
+  position: relative;
+  padding: 15px;
+}
+
+.third-place::before {
+  
+  content: "🥉 3rd Place"; /* Updated Emoji */
+  position: absolute;
+  
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #cd7f32; /* Bronze color */
+  color: white;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 5px;
+  white-space: nowrap;  
+    
 }
 
 .viewMore__box {
@@ -422,23 +444,27 @@ img {
 
 
 .work__container {
-  max-width: 900px; /* Set a maximum width for the container */
-  width:100%;
+  max-width: 1100px; /* Increased from 900px to give more breathing room */
+  width: 100%;
   justify-self: center;
-  padding: 0.25rem; /* Add some padding inside the container */
+  padding: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns with smaller items */
-  column-gap: 3.0rem; /* Reduce gap between columns */
-  row-gap: 1.5rem; /* Reduce gap between rows */
+  /* Changed min to 400px: This forces 1 column on mobile and 2 on desktop */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+  column-gap: 2rem; 
+  row-gap: 2rem;
 }
 
-
 .work__item {
-  max-width: 750px; /* Limit width for each item */
-  padding: 1rem; /* Reduce internal padding */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); 
-  border-radius: 0.5rem; /* Keep a slight rounding if needed */
-  text-align: center; /* Center-align text */
+  width: 100%;      /* Let it fill the grid column */
+  max-width: 100%;  /* Remove the 750px limit so it uses all space in the column */
+  padding: 2rem;    /* More padding makes it look more professional */
+  background-color: #fff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08); 
+  border-radius: 0.75rem;
+  text-align: left; /* Better for reading lists */
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -476,23 +502,25 @@ img {
 }
 
 .work__text-above {
-  margin-top: .75rem;
-  color: rgb(14, 37, 111);
-  padding-left: 0.25rem; /* Indent*/
-  font-size: 1.1rem;
-}
-.work__text-below {
   margin-top: 1rem;
-  padding-left: 1.5rem; /* Indent the list */
-  list-style-type: disc; /* Use default bullet points */
+  color: #0e256f;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: center; /* Keep the title/company centered if you like that look */
+}
+
+.work__text-below {
+  margin-top: 1.5rem;
+  padding-left: 1.2rem; /* Standard indent for bullets */
+  list-style-type: disc;
 }
 
 .work__text-below li {
-  line-height: 1.9; /* Add space between list items */
-  font-size: 0.9rem; /* Adjust text size if needed */
-  color: #333; /* Adjust text color */
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 0.8rem; /* Space between each bullet point */
 }
-
 
 /* ===== CONTACT =====*/
 .contact__container {
@@ -624,12 +652,6 @@ img {
     padding-top: 3rex;
 }
 
-.project__container {
-  display: grid; /* Use grid for a responsive layout */
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Adjust box width */
-  gap: 1.5rem; /* Adds space between boxes */
-  padding-top: 2rem;
-}
 
 .skills__container {
   display: flex; /* Enables flexbox layout */
@@ -751,10 +773,7 @@ img {
     align-items: center;
     text-align: initial;
   }
-  .project__container {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    column-gap: 2rem;
-  }
+
   .course__container {
     display: grid; /* Enables grid layout */
     grid-template-columns: repeat(3, 1fr); /* Creates exactly 3 columns */
